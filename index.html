@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link href='https://fonts.googleapis.com/css?family=Source-Sans-Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <title>CS 106A</title>
+
+  <script>
+    $(function () {
+      $(document).scroll(function () {
+        var $nav = $(".fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+      });
+      console.log("scrolled")
+    });
+    </script>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-light navbar-expand-lg bg-transparent fixed-top">
+    <div class="container">
+      <div class="navbar-brand">CS 106A<span>: Programming Methodologies</span></div>
+      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-4">
+          <li class="nav-item">
+            <a class="nav-link" href="#courseinfo">Course Info</a> </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#assignments">Assignments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#schedule">Schedule</a> </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#staff">Staff</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="lead">
+          <h1>CS 106A</h1>
+          <p>Welcome to Programming Methodologies! This class introduces computer programming for people who have not
+            programmed before.</p>
+        </div>
+        <img src="./images/down-button.png" class="leadImage" />
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row" id="courseinfo">
+      <div class="col-md-12">
+        <h1>Course Info</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Topics</h2>
+        <p>
+          Students will learn all the important topics of basic programming in Python: types, numbers, strings, functions, dictionaries, logic, decomposition, good programming style, debugging, and more. They’ll also touch on more advanced topics they might use in the future, including lambdas, comprehensions, modules, and Jupyter notebooks.
+<p>Python is a huge language with many advanced features, and CS106A does not cover all of it. CS106A teaches the important core features, and students will be able to solve real programming problems with just this course.</p>
+        </p>
+      </div>
+      <div class="col-md-6 side">
+        <h2>Section</h2>
+        <p>
+          There will be a weekly section, and signups begin the first week. Students will have their own section leader for the quarter who will lead section and grade their homework assignments.
+        </p>
+        <h2>Resources</h2>
+        <p>
+          We'll provide web pages of Python language reference, and there is no required textbook.
+        </p>
+        <h2>Grading</h2>
+        <p>Homework is 35%, section is 5%, and exams are 60%</p>
+      </div>
+    </div>
+
+    <div class="row" id="assignments">
+      <div class="col-md-12">
+        <h1>Assignments</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p>Students will have 5 programming assignments.</p>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Due</th>
+          </tr>
+          <tr>
+            <td>Karel the Robot</td>
+            <td>Help Karel retrieve its newspaper</td>
+            <td>4/13</td>
+          </tr>
+          <tr>
+            <td>Breakout</td>
+            <td>Recreate a fun game</td>
+            <td>5/2</td>
+          </tr>
+          <tr>
+            <td>Hangman</td>
+            <td>Make a classic word game</td>
+            <td>5/16</td>
+          </tr>
+          <tr>
+            <td>Sand</td>
+            <td>Implement a 2D world of sand</td>
+            <td>5/30</td>
+          </tr>
+          <tr>
+            <td>NameSurfer</td>
+            <td>Graph the popularity of baby names</td>
+            <td>6/13</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <h2>Lateness</h2>
+        <p>
+          Work turned in later after the deadline loses 15% per day. For example, if a student turns in their work one
+          day late, and that work would have received a 90% had they turned it in on time, they will get 75% after the
+          penalty.
+        </p>
+      </div>
+    </div>
+
+      <div class="row" id="schedule">
+        <div class="col-md-12">
+          <h1>Schedule</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Below is a draft topic plan. </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table>
+            <tr>
+              <th>Week</th>
+              <th>Date</th>
+              <th>Topics</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Sep 23</td>
+              <td>Code, syntax errors, logic, loops, functions, style</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Sep 30</td>
+              <td>RGB colors, digital images, expressions, image processing, loops/logic, line/shape drawing on screen</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Oct 7</td>
+              <td>More logic, black-box functions, return</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Oct 14</td>
+              <td>Strings, lists, files, file processing</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Oct 21</td>
+              <td>More complex loops, break, parsing</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Oct 28</td>
+              <td>Fun image processing, get ready for midterm exam on Nov 1</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Nov 4</td>
+              <td>Dict, dict count algorithm, nested dict algorithms</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Nov 11</td>
+              <td>Mapping, lambda, sorting, custom sorting, modules </td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Nov 18</td>
+              <td>Jupyter notebooks, advanced topics</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Dec 2</td>
+              <td>Conclusions </td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Dec 9</td>
+              <td>Final Exam </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="row" id="staff">
+        <div class="col-md-12">
+          <h1>Staff</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Lecturer: Morgan Bent</h2>
+          <p>Email: morgan.bent@cs.stanford.edu</p>
+          <p>Hi there! I’m Morgan Bent, a lecturer in the Stanford Computer Science department. I graduated from UC Berkeley with a PhD in computer science. In my free time, I enjoy making art, watching movies, and reading.</p>
+        </div>
+      </div>
+    </div>
+    <div class="space"></div>
+</body>
+
+</html>

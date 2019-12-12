@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,semibold,bold,italic&subset=latin,latin-ext');
+
+:root {
+    --green: #53C286;
+    --light-green: #c0e8d2;
+    --black: #202020;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: transparent;
+    font-size: 18px;
+    color: var(--black);
+}
+h1 {
+    margin-top: 88px;
+    margin-bottom: 24px;
+    font-size: 32px;
+    color: var(--green);
+    font-weight: 700;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--green);
+    font-weight: 600;
+}
+.side p {
+    margin-bottom: 24px;
+}
+
+/*----Nav Bar-----*/
+.navbar {
+
+}
+.nav-link , .navbar-brand
+{ 
+    color: #ffffff !important; 
+}
+.nav-link{ 
+    margin-right: 1em !important;
+}
+.nav-link:hover { 
+    background: grey; 
+    color: white;
+}
+.fixed-top.scrolled { 
+    background-color: var(--green) !important;
+    transition: background-color 200ms linear;
+}
+.navbar-collapse{ 
+    justify-content: flex-end;
+}
+.navbar-toggler{  
+    background:#fff !important;
+}
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../images/neutralbackground.png'); /* ../images/startrekbackground.png' */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*----Header-----*/
+.lead {
+    margin: auto;
+    padding: 2em;
+}
+.lead h1 {
+    margin-top: 272px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 80px;
+}
+.lead p {
+    text-align: center;
+    margin: 32px auto 0 auto;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    width: 45%;
+    line-height: 1.5;
+}
+.leadImage {
+    display: block;
+    margin: 0 auto;
+}
+header img {
+   -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
+    -moz-transform: scale(0.5); /* FF3.5+ */
+    -ms-transform: scale(0.5); /* IE9 */
+    -o-transform: scale(0.5); /* Opera 10.5+ */
+    transform: scale(0.5);
+    /* IE6–IE9 */
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+}
+
+
+/*----Table-----*/
+table {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-collapse: collapse;
+    border: 1px solid var(--light-green);
+    width: 100%;
+}
+td {
+    border-bottom: 1px solid var(--light-green);
+    border-top: 1px solid var(--light-green);
+    padding: 8px 16px;
+    text-align: left;
+}​
+th { /* for some reason this is neccessary to not mess up table formatting */
+}
+th {
+    padding: 8px 16px;
+    text-align: left;
+    background-color: var(--light-green);
+    color: var(--main-black);
+}
+
+
+/*----Footer/bottom-----*/
+.space {
+    margin-top: 48px;
+}
+
+@media only screen and (max-width: 992px){
+    .lead p {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .navbar-brand span {
+        display: none;
+    }
+    .lead h1 {
+        margin-top: 64px;
+        font-size: 48px;
+    }
+    .lead p {
+        font-size: 20px;
+        width: 95%;
+    }
+}
