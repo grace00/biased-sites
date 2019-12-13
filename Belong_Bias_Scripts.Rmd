@@ -1,0 +1,154 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+setwd("/Users/gkzhou/Dropbox/CS197")
+library(tidyverse)
+library(multcomp)
+```
+
+
+STEREOTYPICAL COLOR (modified for limited pilot data)
+```{r}
+data <- read_csv("all_color.csv")
+view(data)
+
+data$interact <- interaction(data$condition, data$gender)
+levels(data$interact)
+
+aovResult <- aov(enroll_intent_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR AMBIENT BELONGING
+aovResult <- aov(am_be_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMalit), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR ANTICIPATED SUCCESS
+aovResult <- aov(anticip_success_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR SELF CONFIDENCE
+aovResult <- aov(self_conf_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR FUTURE INTENTIONS
+aovResult <- aov(long_term_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR GENDER ANXIETY
+aovResult <- aov(gender_anxi_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="less"), test=adjusted("none")) # LESS because a lower number is better
+
+
+```
+
+STEREOTYPICAL LANGUAGE (modified for limited pilot data)
+```{r}
+data <- read_csv("all_language.csv")
+view(data)
+
+data$interact <- interaction(data$condition, data$gender)
+levels(data$interact)
+
+aovResult <- aov(enroll_intent_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1))
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR AMBIENT BELONGING
+aovResult <- aov(am_be_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR ANTICIPATED SUCCESS
+aovResult <- aov(anticip_success_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR SELF CONFIDENCE
+aovResult <- aov(self_conf_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR FUTURE INTENTIONS
+aovResult <- aov(long_term_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR GENDER ANXIETY
+aovResult <- aov(gender_anxi_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3,1,1,1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="less"), test=adjusted("none"))
+
+```
+
+STEREOTYPICAL IMAGERY (not working because conditions are missing from limited data)
+```{r}
+data <- read_csv("all_imagery.csv")
+view(data)
+
+data$interact <- interaction(data$condition, data$gender)
+levels(data$interact)
+
+aovResult <- aov(enroll_intent_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3, 1, 1, 1))
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR AMBIENT BELONGING
+aovResult <- aov(am_be_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3, 1, 1, 1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR ANTICIPATED SUCCESS
+aovResult <- aov(anticip_success_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3, 1, 1, 1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR SELF CONFIDENCE
+aovResult <- aov(self_conf_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3, 1, 1, 1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR FUTURE INTENTIONS
+aovResult <- aov(long_term_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3, 1, 1, 1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="greater"), test=adjusted("none"))
+
+# CONTRAST ANALYSIS FOR GENDER ANXIETY
+aovResult <- aov(gender_anxi_all ~ interact, data=data)
+contrastMat <- rbind("contr 03"=c(-3, 1, 1, 1)) 
+summary(glht(aovResult, linfct=mcp(interact=contrastMat), alternative="less"), test=adjusted("none"))
+
+
+```
+
+
+```{r}
+
+library("knitr") # for rendering the RMarkdown file
+library("tidyverse") # for data wrangling 
+
+theme_set(
+  theme_classic()+ #set the theme 
+    theme(text = element_text(size = 20)) #set the default text size
+)
+
+ggplot(diamonds, aes(x = color, y = price, fill = cut)) +
+  stat_summary(fun.y = "mean",
+               geom = "bar",
+               position = position_dodge(width = 0.9),
+               color = "black") +
+  stat_summary(fun.data = "mean_cl_boot",
+
+```
